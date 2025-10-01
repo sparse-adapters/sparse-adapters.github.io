@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Efficient Reinforcement Learning by Discovering Neural Pathways</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+<!--   <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Efficient Reinforcement Learning by Discovering
+Neural Pathways</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://saminyeasar.github.io">Samin Yeasar Arnob</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://riyasatohib.com">Riyasat Ohib</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=nm3liowAAAAJ&hl=en">Sergey Plis</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://amyzhang.github.io">Amy Zhang</a><sup>5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.microsoft.com/en-us/research/people/alsordon/">Alessandro Sordoni</a><sup>6</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://mila.quebec/en/directory/doina-precup">Doina Precup</a><sup>1,2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>McGill University,</span>
+            <span class="author-block"><sup>2</sup>Mila Quebec AI Institute,</span>
+            <span class="author-block"><sup>3</sup>Georgia Institute of Technology,</span>
+            <span class="author-block"><sup>4</sup>Georgia State University,</span>
+            <span class="author-block"><sup>5</sup>University of Texas, Austin,</span>
+            <span class="author-block"><sup>6</sup>Microsoft Research</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openreview.net/forum?id=WEoOreP0n5&referrer=%5Bthe%20profile%20of%20Alessandro%20Sordoni%5D(%2Fprofile%3Fid%3D~Alessandro_Sordoni2)"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/SaminYeasar/DAPD"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/np.png" alt="Teaser Image" style="height: 100%;" />
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Neural pathway:</span> for any given task, activates a specific part of the neural network
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Reinforcement learning (RL) algorithms have been very successful at tackling
+          complex control problems, such as AlphaGo or fusion control. However, current
+          research mainly emphasizes solution quality, often achieved by using large models
+          trained on large amounts of data, and does not account for the financial, environ-
+          mental, and societal costs associated with developing and deploying such models.
+          Modern neural networks are often overparameterized and a significant number of
+          parameters can be pruned without meaningful loss in performance, resulting in
+          more efficient use of the model’s capacity. We present a methodology for identify-
+          ing sparse sub-networks within a larger network in reinforcement learning (RL).
+          We call such sub-networks neural pathways. We show empirically that even very
+          small learned sub-networks, using less than 5% of the large network’s parameters,
+          can provide very good quality solutions. We also demonstrate the training of
+          multiple pathways within the same networks in a multi-task setup, where each
+          pathway tackles a separate task. We evaluate empirically our approach on several
+          continuous control tasks, in both online and offline settings.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/Official_poster_DAPD.png" alt="Teaser Image" style="height: 150%;" />
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{
+arnob2024efficient,
+title={Efficient Reinforcement Learning by Discovering Neural Pathways},
+author={Samin Yeasar Arnob and Riyasat Ohib and Sergey M. Plis and Amy Zhang and Alessandro Sordoni and Doina Precup},
+booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+year={2024},
+url={https://openreview.net/forum?id=WEoOreP0n5}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
