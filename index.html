@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Efficient Reinforcement Learning by Discovering Neural Pathways</title>
+  <title>Exploring Sparse Adapters for Scalable Merging of Parameter Efficient Experts</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -143,21 +143,13 @@ Neural Pathways</h1>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          Reinforcement learning (RL) algorithms have been very successful at tackling
-          complex control problems, such as AlphaGo or fusion control. However, current
-          research mainly emphasizes solution quality, often achieved by using large models
-          trained on large amounts of data, and does not account for the financial, environ-
-          mental, and societal costs associated with developing and deploying such models.
-          Modern neural networks are often overparameterized and a significant number of
-          parameters can be pruned without meaningful loss in performance, resulting in
-          more efficient use of the model’s capacity. We present a methodology for identify-
-          ing sparse sub-networks within a larger network in reinforcement learning (RL).
-          We call such sub-networks neural pathways. We show empirically that even very
-          small learned sub-networks, using less than 5% of the large network’s parameters,
-          can provide very good quality solutions. We also demonstrate the training of
-          multiple pathways within the same networks in a multi-task setup, where each
-          pathway tackles a separate task. We evaluate empirically our approach on several
-          continuous control tasks, in both online and offline settings.
+          Model merging aims to integrate knowledge from multiple task experts into a single, unified multi-task model. Parameter-efficient adaptation, namely 
+          LoRA, have become the de-facto approach to obtain memory-friendly task experts. In this paper, we study the properties of sparse adapters, which
+          train only a subset of weights in the base neural network, as potential adaptation recipe for downstream model merging. First, we propose a simple
+          method for training highly effective sparse adapters, which surprisingly outperforms both LoRA and full fine-tuning in our setting. 
+          Next, we investigate the merging properties of these sparse adapters, merging up to 20 natural language processing task adapters. 
+          Our findings demonstrate that sparse adapters yield superior in-distribution performance post-merging
+          compared to LoRA or full model merging. Achieving strong held-out performance remains a challenge for all methods considered.
           </p>
         </div>
       </div>
@@ -181,14 +173,16 @@ Neural Pathways</h1>
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{
-arnob2024efficient,
-title={Efficient Reinforcement Learning by Discovering Neural Pathways},
-author={Samin Yeasar Arnob and Riyasat Ohib and Sergey M. Plis and Amy Zhang and Alessandro Sordoni and Doina Precup},
-booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
-year={2024},
-url={https://openreview.net/forum?id=WEoOreP0n5}
-}</code></pre>
+    <pre><code>
+      @inproceedings{
+arnob2025exploring,
+title={Exploring Sparse Adapters for Scalable Merging of Parameter Efficient Experts},
+author={Samin Yeasar Arnob and Zhan Su and Minseon Kim and Oleksiy Ostapenko and Riyasat Ohib and Esra'a Saleh and Doina Precup and Lucas Caccia and Alessandro Sordoni},
+booktitle={Second Conference on Language Modeling},
+year={2025},
+url={https://openreview.net/forum?id=te7UC87Zbw}
+}
+    </code></pre>
   </div>
 </section>
 
